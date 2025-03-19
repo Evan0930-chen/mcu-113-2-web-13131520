@@ -7,3 +7,6 @@ console.log("ProductName = ", productName);
 
 let isShow = true;
 console.log("isShow = ", isShow);
+
+let createDate = undefined;
+console.log("Create Date = ", createDate);
