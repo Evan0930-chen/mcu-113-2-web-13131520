@@ -7,10 +7,6 @@ let product = [
 
 console.table(product);
 
-setProductDisplay(product[0], false);
+product[0].setDisplay(false);
 
 console.table(product);
-
-function setProductDisplay(product: Product, isShow: boolean) {
-  product.isShow = isShow;
-}
