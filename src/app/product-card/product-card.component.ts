@@ -1,9 +1,10 @@
+import { DatePipe } from '@angular/common';
 import { Product } from './../../assets/code/product';
 import { booleanAttribute, Component, EventEmitter, Input, numberAttribute, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './product-card.component.html',
   styleUrl: './product-card.component.scss',
 })
@@ -28,6 +29,9 @@ export class ProductCardComponent {
 
   @Input()
   photoUrl!: string;
+
+  @Input()
+  createDate!: Date;
 
   onSetDisplay(isShow: boolean): void {
     this.isShowChange.emit(isShow);
