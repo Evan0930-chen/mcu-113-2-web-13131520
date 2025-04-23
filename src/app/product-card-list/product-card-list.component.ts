@@ -1,5 +1,5 @@
 import { PaginationComponent } from './../pagination/pagination.component';
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 import { ProductCardComponent } from '../product-card/product-card.component';
 import { Product } from '../models/product';
@@ -11,8 +11,7 @@ import { Product } from '../models/product';
   styleUrl: './product-card-list.component.scss',
 })
 export class ProductCardListComponent {
-  @Input()
-  products!: Product[];
+  readonly products = input<Product[]>([]);
 
   pageIndex = 1;
 }
